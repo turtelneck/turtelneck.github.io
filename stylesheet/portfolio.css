@@ -336,7 +336,7 @@ img:hover {
 .open-btn {
 	position: relative;
 	top: 8px;
-	background-color: #ebacf3;
+	background-color: #f6c1fd;
 	color: #000;
 	border-radius: 4px;
 	padding: 16px 20px;
@@ -360,7 +360,7 @@ img:hover {
 #popup-background {
 	position: relative;
 	top: 20px;
-	background-color: #97a1e8;
+	background-color: #aeb4ff;
 	border-radius: 20px;
 	height: 70px;
 }
