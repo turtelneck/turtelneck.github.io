@@ -336,8 +336,8 @@ img:hover {
 .open-btn {
 	position: relative;
 	top: 8px;
-	background-color: #97a1e8;
-	color: #fff;
+	background-color: #ebacf3;
+	color: #000;
 	border-radius: 4px;
 	padding: 16px 20px;
 	cursor: pointer;
@@ -360,7 +360,7 @@ img:hover {
 #popup-background {
 	position: relative;
 	top: 20px;
-	background-color: #f3c7be;
+	background-color: #97a1e8;
 	border-radius: 20px;
 	height: 70px;
 }
@@ -376,6 +376,7 @@ img:hover {
 }
 
 .hidden-btn-container .btn {
+	background-color: #bff3be;
 	padding: 17px 20px;
 	cursor: pointer;
 	width: 100%;
@@ -385,8 +386,8 @@ img:hover {
 }
 
 .hidden-btn-container .btn:hover {
-	background-color: #c3f7ff;
-	color: #000;
+	background-color: #85e2fd;
+	color: #fff;
 }
 
 #message-when-open {
@@ -396,30 +397,6 @@ img:hover {
 	padding: 4px;
 	margin: 0px 11px;
 	border-radius: 20px;
-}
-
-.btn1 {
-	background-color: #f3e8be;
-}
-
-.btn2 {
-	background-color: #f3e8be;
-}
-
-.btn3 {
-	background-color: #f3e8be;
-}
-
-.btn4 {
-	background-color: #f3e8be;
-}
-
-.btn5 {
-	background-color: #f3e8be;
-}
-
-.btn6 {
-	background-color: #f3e8be;
 }
 
 #h1_git {
@@ -449,6 +426,7 @@ img:hover {
 }
 
 #popup_p {
+	color: #fff;
 	float: left;
 	position: relative;
 	top: 5px;
@@ -482,7 +460,7 @@ img:hover {
 ///////////////////// */
 footer {
 	padding: 2%;
-	background-color:#f3c7be;
+	background-color:#bff3be;
 }
 
 .slight-pad {
