@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Rhodri</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet/portfolio.css">
+	</head>
+
+<!-- Body -->
+<body class="Background" id="Background"> 
+
+<!-- Navbar -->
+	<div class="Navbar">
+		<a class="active" href="#Home">Home</a> 
+		<a href="#About">About</a>
+		<a href="#GitHub">GitHub</a>
+		<a href="#Contact">Contact</a>
+	</div><br><br>
+
+<!-- Video -->
+	<div id="Home">
+		<video autoplay muted loop id="Typing_Video">
+			<source src="stylesheet/video/big-sea.mp4" type="video/mp4">
+			Sorry, your browser doesn't support this embedded video. <!-- message if video fails to run -->
+		</video>
+	</div>
+
+<!-- Top row over video --> 
+	<div class="Video_Text"> 
+		<h1 id="hey">hey.</h1>
+		<h3 id="my_name">my name is Rhodri.</h3>
+			<p> 
+				<strong>
+					<center id="welcome">
+						thanks for stopping by!<br>
+						welcome to my lil' corner of the interwebs.
+					</center>	
+				</strong>
+			</p> 
+	</div>
+
+<!-- About -->
+	<div class="Row" id="About"> 
+		<div class="Column_2">
+			<img src="stylesheet/images/portrait.jpg" id="me" alt="pic of me">
+		</div>
+  
+		<div class="Column_1">
+			<h1>About</h2>
+				<div class="paragraph">
+					<p id="fadeIn1">
+						As a software developer I enjoy our jurisdiction over the bumbling 0's and 1's. Benevolent sovereign that I am, I find there are few greater pleasures than a well-ordered empire.
+					</p>
+				</div>
+				<div class="paragraph">
+					<p id="fadeIn2">
+						Of course, the efficacy of my reign is rivaled only by the variety of those subjects I govern. Under the tutelage of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer curriculum, I have brought HTML, CSS, JavaScript, SQL, Python, and C# under my rule.
+					</p>
+				</div>
+				<div class="paragraph">
+					<p id="fadeIn3">
+						When I am not called away by my kingly duties, I enjoy video games, reading, and being out of doors. Should you wish to add a competent statesman to the administrative body of <i>your</i> digital commonwealth, I certainly would not find it amiss to be <a href="#Contact">contacted</a>.
+					</p>
+				</div>
+			</p>
+		</div>
+	</div>
+
+<!-- GitHub Link -->
+	<div class="Row" id="GitHub">
+		<div class="Column_1" id="git_column">
+			<div class="unhidden-btn-container Row" id="encouragement">
+				<h3 id="message-when-closed">Artefacts of my Hegemony may be found below.</h3>
+			</div>
+			<!-- popup box -->
+			<div id="popup-background">
+				<button class="open-btn" id="popup_btn" onclick="openForm();order66();">Cool!</button>
+
+				<div class="hidden-btn-container Row" id="my-form">
+					<h3 id="message-when-open">Some favorites, or click the turtle to see it all --></h3>
+					<div id="btn-columns">
+		   				<div id="popup-Column_1" class="popup-Column_1">
+							<button type="submit" id="btnTopLeft" class="btn btn1" target="_blank">an example</button>
+							<button type="submit" id="btnMidLeft" class="btn btn2" target="_blank">another example</button>
+							<button type="submit" id="btnBotLeft" class="btn btn3" target="_blank">and another example</button>
+		    			</div>
+		  				<div id="popup-Column_2" class="popup-Column_2">
+		 				   	<button type="submit" id="btnTopRight" class="btn btn4" target="_blank">an example</button>
+							<button type="submit" id="btnMidRight" class="btn btn5" target="_blank">another example</button>
+							<button type="submit" id="btnBotRight" class="btn btn6" target="_blank">and another example</button>
+						</div>
+						<p class="fade-out" id="popup_p">(pssssst hey click that button up there again)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="Column_2">
+			<a href="https://github.com/turtelneck" target="_blank">
+				<img src="stylesheet/images/github.jpg" id="git" alt="GitHub">
+			</a>
+		</div>
+	</div>
+
+<!-- Contact section -->
+	<div class="Row" id="Contact"> 
+		<div class="Column_3">
+			<img src="stylesheet/images/me-as-charlie-brown_copy.png" id="mailbox" alt="me_as_charlie_brown">
+		</div>
+	
+		<div class="Column_4">
+			<h1 id="ctkt">Contact</h1> 
+				<form action="https://formspree.io/f/mqkgdeep" onsubmit="return formValidation()" method="POST" name="ctkt">
+					<label>name:</label>
+						<input type="text" id="Name" name="Name" placeholder="jot that name down, friendo">
+					<label>email:</label>
+						<input type="email" id="Email" name="Email" placeholder="and your email, if you're feelin spicy">
+					<label>phone:</label>
+						<input type="tel" id="Phone" name="Phone" placeholder="and/or phone, if you prefer">
+					<label>message:</label>
+						<input type="text" id="Message" name="Message" placeholder="this one's up to you. such freedom! what'll you write?">
+						<input type="submit" value="Submit">
+				</form>
+		</div>
+	</div>
+	
+<!-- Footer -->
+	<footer>
+		<p>
+			<center>&copy; rhodri,  aninboxforstuff@gmail.com</center>
+			<center class="slight-pad">(yup, that's a real email)</center>
+		</p>
+	</footer>
+
+	<div id="lightning_1"></div>
+	<div id="lightning_2"></div>
+	<div id="lightning_3"></div>
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
