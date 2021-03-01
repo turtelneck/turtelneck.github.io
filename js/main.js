@@ -222,6 +222,9 @@ function order66() {
 			document.getElementById('me').src = 'stylesheet/images/family-man.jpg';
 			document.getElementById('git').src = 'stylesheet/images/palpatine-zap.jpg';
 			document.getElementById('mailbox').src = 'stylesheet/images/tony-boy.jpg';
+			// add red to popup and footer
+			document.getElementById('footer').style.backgroundColor = '#f3c7be';
+			popupBackground.style.backgroundColor = '#f3c7be';
 		}, 600);
 		// switch background to palpatine shark
 		setTimeout(function () { document.getElementById('Background').style.backgroundImage = 'url(stylesheet/images/palpatine-shark.gif)'; }, 900);
