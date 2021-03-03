@@ -336,7 +336,7 @@ img:hover {
 .open-btn {
 	position: relative;
 	top: 8px;
-	background-color: #f6c1fd;
+	background-color: #bff3be;
 	color: #000;
 	border-radius: 4px;
 	padding: 16px 20px;
@@ -348,8 +348,8 @@ img:hover {
 }
 
 .open-btn:hover {
-	background-color: #c3f7ff;
-	color: #000;
+	background-color: #85e2fd;
+	color: #464646;
 }
 
 #popup_btn {
@@ -360,7 +360,7 @@ img:hover {
 #popup-background {
 	position: relative;
 	top: 20px;
-	background-color: #aeb4ff;
+	background-color: #7b7b7b;
 	border-radius: 20px;
 	height: 70px;
 }
