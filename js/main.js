@@ -51,13 +51,44 @@ const fadeIn = () => {
 window.onload = fadeIn;
 
 
+let faves = [
+	"https://github.com/turtelneck/C-Sharp/tree/main/CarInsurance",
+	"https://whattimeisitinsouthsudan.azurewebsites.net/",
+	"https://github.com/turtelneck/Python-Projects/tree/main/AlbumTracker",
+	"https://github.com/turtelneck/turtelneck.github.io/tree/main/js",
+	"https://github.com/turtelneck/Personal-Projects/tree/main/dating_bio",
+	"https://github.com/turtelneck/Personal-Projects/tree/main/pythagorean-theorum/JS",
+	"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+
+// the initial onclick attributes
+btnTopLeft.onclick = function () { window.open("https://github.com/turtelneck/C-Sharp/blob/main/README.md",'_blank'); }
+btnMidLeft.onclick = function () { window.open("https://github.com/turtelneck/Python-Projects/blob/main/README.md", '_blank'); }
+btnBotLeft.onclick = function () { window.open("https://github.com/turtelneck/Personal-Projects/blob/main/README.md", '_blank'); }
+btnTopRight.onclick = function () { window.open("https://github.com/turtelneck/Javascript-Projects/blob/main/README.md", '_blank'); }
+btnMidRight.onclick = function () { window.open("https://github.com/turtelneck/HTML-and-CSS-Projects/blob/main/README.md", '_blank'); }
+btnBotRight.onclick = function () { window.open(faves[getRandomInt(faves.length)], '_blank'); }
+// onclick attributes to be set later
+function btnTopLeftPalpatine() { window.open("https://www.deviantart.com/oracledk/art/Darth-Plagueis-Death-meme-828238541",'_blank'); }
+function btnMidLeftPalpatine() { window.open("https://www.youtube.com/watch?v=oQbFaB-n1gM", '_blank'); }
+function btnBotLeftPalpatine() { window.open("https://youtu.be/OCP-Y4u-beQ?t=42", '_blank'); }
+function btnTopRightPalpatine() { window.open("https://www.youtube.com/watch?v=ca-e5MrVbVU", '_blank'); }
+function btnMidRightPalpatine() { window.open("https://www.reddit.com/r/PrequelMemes/comments/719ml6/when_people_say_ironic_without_realising_it_is_a/", '_blank'); }
+function btnBotRightPalpatine() { window.open("https://www.youtube.com/watch?v=_XWomD6TazQ", '_blank'); }
+
+
 function formValidation() {
-	let ctkt = document.forms["ctkt"]
-	let name = ctkt["Name"].value;
-	let email = ctkt["Email"].value;
-	let phone = ctkt["Phone"].value;
+	let contct = document.forms["contct"]
+	let name = contct["Name"].value;
+	let email = contct["Email"].value;
+	let phone = contct["Phone"].value;
 	// figured I'd leave the rest just in case, but `msg` is the only one in use at the moment
-	let msg = ctkt["Message"].value;
+	let msg = contct["Message"].value;
 
 	if (msg == "") {
 		alert("you sure you don't want to say anything?");
@@ -67,7 +98,6 @@ function formValidation() {
 		returnToPreviousPage();
 	}
 }
-
 
 
 let formOpen = false;
@@ -99,7 +129,7 @@ function openForm() {
 
 let msgList = [ // length: 20
 	"",
-	"Some favorites, or click the turtle to see it all -->",
+	"The main stuff, or click the turtle to see it all -->",
 	"Fun, right? Go ahead, have another click.",
 	"You're quite good at this! Click again.",
 	"I can see you are no ordinary user. Please, click again.",
@@ -235,17 +265,24 @@ function order66() {
 		btnBotRight.style.removeProperty('display');
 		// give them new names
 		btnTopLeft.innerHTML = 'Offed My Own Master';
-		btnBotLeft.innerHTML = 'I Am The Senate';
 		btnMidLeft.innerHTML = 'Hoodwinked The Chosen One';
+		btnBotLeft.innerHTML = 'I Am The Senate';
 		btnTopRight.innerHTML = 'Supreme Chancellor?? (LOL!)';
 		btnMidRight.innerHTML = 'My Red Hot One-Liners';
 		btnBotRight.innerHTML = 'My Signature Move';
-		// and then new links
-		btnTopLeft.onclick = function () { window.open("https://www.deviantart.com/oracledk/art/Darth-Plagueis-Death-meme-828238541",'_blank'); }
+		// and then new onclick functions from lines 62-67
+		btnTopLeft.setAttribute( "onclick", "btnTopLeftPalpatine()");
+		btnMidLeft.setAttribute( "onclick", "btnMidLeftPalpatine()");
+		btnBotLeft.setAttribute( "onclick", "btnBotLeftPalpatine()");
+		btnTopRight.setAttribute( "onclick", "btnTopRightPalpatine()");
+		btnMidRight.setAttribute( "onclick", "btnMidRightPalpatine()");
+		btnBotRight.setAttribute( "onclick", "btnBotRightPalpatine()");
+		/*
 		btnBotLeft.onclick = function () { window.open("https://youtu.be/OCP-Y4u-beQ?t=42", '_blank'); }
 		btnMidLeft.onclick = function () { window.open("https://www.youtube.com/watch?v=oQbFaB-n1gM", '_blank'); }
 		btnTopRight.onclick = function () { window.open("https://www.youtube.com/watch?v=ca-e5MrVbVU", '_blank'); }
 		btnMidRight.onclick = function () { window.open("https://www.reddit.com/r/PrequelMemes/comments/719ml6/when_people_say_ironic_without_realising_it_is_a/", '_blank'); }
 		btnBotRight.onclick = function () { window.open("https://www.youtube.com/watch?v=_XWomD6TazQ", '_blank'); }
+		*/
 	}
 }

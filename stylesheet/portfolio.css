@@ -1,3 +1,11 @@
+:root {
+	--lightred:#ef9292;
+	--lightblue:#85e2fd;
+	--translucentlightblue:rgb(190 233 243 / 85%);
+	--lightgreen:#bff3be;
+	--spearmint:#57f195;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -92,7 +100,7 @@ body {
 	padding-top: 3%;
 	height: 400px;
 	background-color: #fff;
-	background: rgb(190 233 243 / 85%);
+	background: var(--translucentlightblue);
 }
 
 #git_column {
@@ -122,7 +130,7 @@ body {
 	padding-top: 2%;
 	height: 450px;
 	background-color: #fff;
-	background: rgb(190 233 243 / 85%);
+	background: var(--translucentlightblue);
 }
 
 .Row {
@@ -336,7 +344,7 @@ img:hover {
 .open-btn {
 	position: relative;
 	top: 8px;
-	background-color: #bff3be;
+	background-color: var(--lightred);
 	color: #000;
 	border-radius: 4px;
 	padding: 16px 20px;
@@ -348,7 +356,7 @@ img:hover {
 }
 
 .open-btn:hover {
-	background-color: #85e2fd;
+	background-color: var(--spearmint);
 	color: #464646;
 }
 
@@ -376,7 +384,7 @@ img:hover {
 }
 
 .hidden-btn-container .btn {
-	background-color: #bff3be;
+	background-color: var(--lightred);
 	padding: 17px 20px;
 	cursor: pointer;
 	width: 100%;
@@ -386,7 +394,7 @@ img:hover {
 }
 
 .hidden-btn-container .btn:hover {
-	background-color: #85e2fd;
+	background-color: var(--spearmint);
 	color: #fff;
 }
 
