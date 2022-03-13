@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: playFairSc;
+    src: url(./assets/fonts/PlayfairDisplaySC-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: ralewayLight;
+  src: url(./assets/fonts/Raleway-Light.ttf) format("truetype");
+}
+
+body {
+	margin: 0;
+	background-color: #cdcdcd;
+}
+
+ul,p {
+  margin: 0;
+  padding: 0;
+}

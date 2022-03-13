@@ -1,0 +1,230 @@
+/* boxes.Component's private CSS styles */
+
+a,div,img,span {
+  border-radius: inherit;
+  font-family: ralewayLight;
+}
+
+a {
+  text-decoration: none;
+}
+
+.skew {
+  transform: skew(315deg);
+}
+.unskew {
+  transform: skew(45deg);
+}
+
+/* update border-radius attribute when single column */
+@media (min-width: 630px) {
+  #card0 {
+    border-top-left-radius: 1rem;
+  }
+  #card1 {
+    border-top-right-radius: 1rem;
+  }
+  #card6 {
+    border-bottom-left-radius: 1rem;
+  }
+  #card7 {
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+@media (max-width: 629px) {
+  #card0 {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  #card7 {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+/* when the page gets only wide enough to contain 2 columns,
+ * I want those columns to auto-fill all space available.
+ */
+@media (min-width: 826px) {
+  .card-grid {
+    max-width: 42rem; /* ensures columns sit at 2, needs to be changed when contents of `.card {grid-template-columns}` are changed */
+  }
+}
+
+@media (max-width: 825px) {
+  .card-grid {
+    max-width: none; /* ensures columns begin to respond dynamically */
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); /* needs to be changed if I ever change font-size */
+  margin:  auto 8vw auto 8vw;
+  padding-top: 9rem;
+  padding-bottom: 1rem;
+}
+
+.card {
+  max-height: 288px;
+  background: #bbbbbb;
+  /*prevents blur overflow*/
+  overflow: hidden;
+}
+
+
+.product-card {
+  max-height: 288px;
+  color: white;
+}
+
+.card-text-container {
+  position: relative;
+  background: #36363680;
+  height: 288px;
+  z-index: 1;
+}
+
+.card-text {
+  position: relative;
+  text-align: center;
+  font-size: 26px;
+  margin: auto;
+  border-radius: 0;
+}
+
+#title-price-container {
+  position: absolute;
+  left: -26px;
+  max-width: 21rem;
+  width: 100%;
+  padding-bottom: 4px;
+  border-radius: 0 0 6px 0;
+}
+
+#product-title {
+  margin-left: 32px;
+}
+
+#comma {
+}
+
+#product-price {
+}
+
+.product-copy-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  height: 288px;
+}
+
+#product-copy {
+  font-size: 18px;
+  text-align: justify;
+  padding: 3px 6px;
+  background-color: gray;
+}
+
+/*hover logic*/
+.card-text-container:hover {
+  background: #afafaf75;
+  color: #5fff5c;
+}
+
+.card-text-container:hover > #title-price-container {
+  background-color: gray;
+}
+
+.card-text-container:hover > .product-title {
+  grid-row: 3;
+}
+
+.card-text-container:hover > .product-price {
+  grid-row: 4;
+}
+
+.card-text-container:hover > .product-copy-container {
+  display: flex;
+}
+
+.card-img {
+  display: block;
+  position: relative;
+  top: -288px;
+  width: 100%;
+  object-fit: cover;
+  max-height: 288px;
+  z-index: 0;
+}
+
+.card-text-container:hover + .card-img {
+  filter: blur(10px);
+}
+
+/* When the page gets small enough, 
+ * images no longer display on the right.
+ */
+@media (min-width: 1222px) {
+  .img-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
+}
+
+@media (max-width: 1221px) {
+  .img-container {
+    display: none;
+  }
+}
+
+.img-container {
+  position: fixed;
+  left:  calc(8vw + 43rem);
+  top:  9rem;
+  width: calc(100vw - 51rem);
+  height: calc(100vh - 10rem);
+  border-radius: 6px;
+}
+
+img {
+  max-width: 725px;
+  max-height: 725px;
+  min-height: 288px;
+  width: 95%;
+}
+
+.img-container img {
+  margin: auto;
+}
+
+
+/*custom backgrounds to make the blur effect look more natural*/
+#card0 {
+  background: #6c6c6c;
+}
+#card1 {
+  background: #585858;
+}
+#card2 {
+  background: #787878;
+}
+#card3 {
+  background: #e7e7e7;
+}
+#card4 {
+  background: #f5f5f5;
+}
+#card5 {
+  background: #ebebeb;
+}
+#card6 {
+  background: #7a7a7a;
+}
+#card7 {
+  background: #9baeb3;
+}

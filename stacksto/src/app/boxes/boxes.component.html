@@ -1,1 +1,39 @@
-<p>boxes works!</p>
+<div class="card-grid">
+  <div *ngFor="let box of boxes; let i = index"
+  class="card" id="{{'card' + i}}">
+    <a routerLink="/detail/{{box.id}}">
+      <div 
+      (mouseover)="onHover(box.id)"
+      (mouseleave)="offHover()"
+      class="product-card">
+
+        <div class="card-text-container">
+
+          <div class="skew" id="title-price-container">
+            <div class="unskew">
+              <span class="card-text" id="product-title">{{box.name}}</span>
+              <span class="card-text" id="comma">, </span>
+              <span class="card-text" id="product-price">{{box.price}}</span>
+            </div>
+          </div>
+
+          <div class="product-copy-container">
+            <span class="card-text" id="product-copy">{{box.shortdesc}}</span>
+          </div>
+        </div>
+
+        <img class="card-img" src="{{box.imageAddress}}" alt="{{box.imageAltDescription}}">
+      
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="img-container">
+
+  <img *ngFor="let box of boxes; let i = index"
+  [attr.data-index]="i"
+  [style.display]="(i === selectedBox) ? 'block' : 'none'"
+  src="{{box.imageAddress}}">
+  
+</div>

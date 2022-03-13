@@ -1,0 +1,98 @@
+/* Header private styles */
+
+@media (min-width: 820px) {
+  .header {
+    grid-template-columns: 8vw minmax(21rem, auto) 21rem 1fr;
+  }
+  #search-component {
+    display: flex;
+  }
+  .search-result {
+    display: flex;
+  }
+}
+
+@media (max-width: 821px) {
+  .header {
+    grid-template-columns: 100vw;
+  }
+  #empty-space {
+    display: none;
+  }
+  #search-component {
+    display: none;
+  }
+  .search-result {
+    display: none;
+  }
+}
+
+.header {
+  display: grid;
+  position: fixed;
+  width: 100vw;
+  height: 8rem;
+  background-color: white;
+  z-index: 9;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  position: relative;
+  top: -4px;
+  font-size: 40px;
+  font-family: 'playFairSc';
+  line-height: 44px;
+  max-width: 8rem;
+}
+
+#search-component {
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+  width: calc(100vw - 21rem);
+}
+
+input {
+  padding: .5rem;
+  width: calc(100% - 1rem);
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: #336699 auto 1px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.search-result li a {
+  border: 1px solid gray;
+  display: inline-block;
+  width: 100%;
+  padding: .5rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+.search-result li a:hover {
+  background-color: #435A60;
+  color: white;
+}
+
+.search-result {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 8rem;
+  padding-right: 1rem;
+}
+
+/*TODO: add magnifying glass icon and 'search' pre-filled text to the search bar*/

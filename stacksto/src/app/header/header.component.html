@@ -1,1 +1,23 @@
-<p>header works!</p>
+<div class="header">
+
+  <div id="empty-space"></div>
+
+  <div class="title-container">
+    <p class="title">{{title}}</p>
+  </div>
+
+  <div id="search-component">
+    <input #searchBox id="search-box"
+    (input)="search(searchBox.value)"
+    placeholder="Search" />
+  </div>
+
+  <ul class="search-result">
+    <li *ngFor="let box of boxes$ | async" >
+      <a routerLink="/detail/{{box.id}}">
+        {{box.name}}
+      </a>
+    </li>
+  </ul>
+
+</div>

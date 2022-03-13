@@ -1,1 +1,19 @@
-<p>box-detail works!</p>
+<div class="details-background">
+  <div *ngIf="box" class="copy-container">
+    <h1 class="details-title">{{box.name | uppercase}}</h1>
+    <p class="details-copy col-1 bg">{{box.titles}}</p>
+    <p class="details-copy col-1 bg">{{box.shortdesc}}</p>
+    <p class="details-copy col-1 bg">{{box.price}}</p>
+
+    <img class="card-img col-2" src="{{box.imageAddress}}" alt="{{box.imageAltDescription}}">
+    
+    <h2 class="details-header col-1">About</h2>
+    <p class="details-copy col-1 bg">{{box.longdesc}}</p>
+    <h2 class="details-header col-1">Tech</h2>
+    <p class="details-copy col-1 bg">{{box.tech}}</p>
+  </div>
+  
+  <div class="button-container">
+    <button (click)="goBack()">back</button>
+  </div>
+</div>
